@@ -1,6 +1,6 @@
 # Shared Data
 
-aravel Haystack has the ability for your jobs to store and retrieve state/data between jobs. This is really useful if you need to store data in the first job and then in the second job, process the data and in the final job, email the processed data. You are able to create a process pipeline since each job is processed in sequential order. This is really exciting because with traditional chained jobs, you cannot share data between jobs.
+Laravel Haystack has the ability for your jobs to store and retrieve state/data between jobs. This is really useful if you need to store data in the first job and then in the second job, process the data and in the final job, email the processed data. You are able to create a process pipeline since each job is processed in sequential order. This is really exciting because with traditional chained jobs, you cannot share data between jobs.
 
 ```php
 <?php

@@ -5,7 +5,6 @@
 * [Introduction](README.md)
 * [Installation](getting-started/installation.md)
 * [Getting Started](getting-started/getting-started.md)
-* [View Code On Github](https://github.com/Sammyjo20/laravel-haystack)
 
 ## 🗺 Next Up
 

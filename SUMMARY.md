@@ -35,3 +35,4 @@
 
 * [Support](finish/support.md)
 * [Star On Github](https://github.com/Sammyjo20/laravel-haystack)
+* [Edit Documentation](https://github.com/sammyjo20/laravel-haystack-docs)

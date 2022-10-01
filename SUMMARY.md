@@ -3,6 +3,7 @@
 ## 🎯 Getting Started
 
 * [Introduction](README.md)
+* [How It Works](getting-started/how-it-works.md)
 * [Installation](getting-started/installation.md)
 * [Getting Started](getting-started/getting-started.md)
 

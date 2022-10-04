@@ -1,5 +1,5 @@
 ---
-description: Powerful database-driven job chains for Laravel
+description: ⚡️ Supercharged job chains for Laravel
 ---
 
 # Introduction

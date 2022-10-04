@@ -1,10 +1,20 @@
 # Chunking Jobs
 
-Sometimes it's useful to split up the processing of something into multiple jobs, like processing a large file or scraping data from a paginated API. Laravel haystack uses the Laravel Chunkable Job package and allows you to split a job up into chunks. Just create a job, remove the `handle` method and extend the `ChunkableHaystackJob` class. It's important that you extend this class and not `ChunkableJob` as it will use Haystack's methods to keep processing on the same Haystack.
+Sometimes it's useful to split up the processing of something into multiple jobs, like processing a large file or scraping data from a paginated API. Laravel haystack uses the Laravel Chunkable Job package and allows you to split a job up into chunks.
+
+### Setup
+
+Firstly, install the `laravel-chunkable-jobs` package using Composer with the command below.
+
+```
+composer require sammyjo20/laravel-chunkable-jobs
+```
+
+### Configuring Jobs
+
+Next, just create a job, remove the `handle` method and extend the `ChunkableHaystackJob` class. It's important that you extend this class and not `ChunkableJob` as it will use Haystack's methods to keep processing on the same Haystack.
 
 You do not need to add the `StackableJob` interface or `Stackable` trait since the `ChunkableHaystackJob` will already add this for you.
-
-To read more about the chunkable jobs documentation [click here](https://github.com/sammyjo20/laravel-chunkable-jobs).
 
 ```php
 <?php
@@ -35,3 +45,7 @@ class GetPageOfPokemon extends ChunkableHaystackJob implements ShouldQueue
     }
 }
 ```
+
+### Documentation
+
+To read more the laravel-chunkable-jobs documentation [click here](https://github.com/sammyjo20/laravel-chunkable-jobs).

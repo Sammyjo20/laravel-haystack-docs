@@ -1,6 +1,4 @@
-# Getting Started
-
-#### Configuring Jobs
+# Usage
 
 To prepare your jobs for Laravel Haystack, you must add the **StackableJob** interface and **Stackable** trait to your jobs. This provides the properties and methods Haystack requires.
 
@@ -17,9 +15,7 @@ class ProcessPodcast implements ShouldQueue, StackableJob
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, Stackable
 ```
 
-#### Building Haystacks
-
-Let’s create our first Haystack. To get started, import the Haystack model and then call the “build” static function on it. This will provide you with the **HaystackBuilder** class which can be used to define your haystack. You can then use the “addJob” method to add jobs to the Haystack. Make sure all the jobs have the **StackableJob** interface and **Stackable** trait.
+Now let’s create our first Haystack. To get started, import the Haystack model and then call the “build” static function on it. This will provide you with the **HaystackBuilder** class which can be used to define your haystack. You can then use the “addJob” method to add jobs to the Haystack. Make sure all the jobs have the **StackableJob** interface and **Stackable** trait.
 
 ```php
 <?php
@@ -32,30 +28,29 @@ Haystack::build()
    ->addJob(new TweetAboutPodcast);
 ```
 
-> You may also use the `addJobs()` method which accepts an array or collection of stackable jobs.
+{% hint style="info" %}
+You may also use the `addJobs` method which can accept an array or collection of jobs
+{% endhint %}
 
 #### Dispatching Haystacks
 
 Once you have created your Haystack, you can dispatch it using the `dispatch` method.
 
-```php
-<?php
+<pre class="language-php"><code class="lang-php">&#x3C;?php
 
 use Sammyjo20\LaravelHaystack\Models\Haystack;
 
-Haystack::build()
+$haystack = Haystack::build()
    ->addJob(new RecordPodcast)
    ->addJob(new PublishPodcast)
    ->addJob(new TweetAboutPodcast)
-   ->dispatch();
-```
+<strong>   ->dispatch();</strong></code></pre>
 
 #### Creating Haystacks For Later
 
 Use the create method to create the model and store it somewhere for later processing. You can start the Haystack at any time.
 
-```php
-<?php
+<pre class="language-php"><code class="lang-php">&#x3C;?php
 
 use Sammyjo20\LaravelHaystack\Models\Haystack;
 
@@ -67,15 +62,13 @@ $haystack = Haystack::build()
 
 // Do other things...
 
-$haystack->start(); // Initiate haystack
-```
+<strong>$haystack->start(); // Initiate haystack</strong></code></pre>
 
 #### Cancelling Haystacks
 
 If you need to cancel the Haystack during processing, you can do this by using the `cancel` method on the Haystack model. If a job is being processed when you cancel it, it will process the next job and then stop before the job is executed.
 
-```php
-use Sammyjo20\LaravelHaystack\Models\Haystack;
+<pre class="language-php"><code class="lang-php">use Sammyjo20\LaravelHaystack\Models\Haystack;
 
 $haystack = Haystack::build()
    ->addJob(new RecordPodcast)
@@ -89,7 +82,6 @@ $haystack->start();
 
 // Do other things...
 
-$haystack->cancel();
-```
+<strong>$haystack->cancel();</strong></code></pre>
 
 > When a haystack is cancelled, we will not run the `then` or `catch` closures, but we will execute the `finally` closure.

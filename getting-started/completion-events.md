@@ -1,4 +1,4 @@
-# Callback Events
+# Completion Events
 
 Laravel Haystack provides you with three really simple callback events that will be serialized and used at certain points in time.
 

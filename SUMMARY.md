@@ -5,25 +5,25 @@
 * [Introduction](README.md)
 * [How It Works](getting-started/how-it-works.md)
 * [Installation](getting-started/installation.md)
-* [Getting Started](getting-started/getting-started.md)
-* [Callback Events](getting-started/callback-events.md)
+* [Usage](getting-started/usage.md)
+* [Completion Events](getting-started/completion-events.md)
 
 ## 🛰 Cool Features
 
-* [Chunking Jobs](cool-features/chunking-jobs.md)
-* [Shared Data](cool-features/shared-data.md)
-* [Shared Models](cool-features/shared-models.md)
-* [Long Delays & Pauses](cool-features/long-delays-and-pauses.md)
-* [Appending & Prepending Jobs](cool-features/appending-and-prepending-jobs.md)
+* [Shared Data](explore/shared-data.md)
+* [Shared Models](explore/shared-models.md)
+* [Long Delays & Pauses](next-up/long-delays-and-pauses.md)
+* [Appending & Prepending Jobs](next-up/appending-and-prepending-jobs.md)
+* [Chunking Jobs](explore/chunking-jobs.md)
 
 ## 🗺 Next Up
 
 * [Allowing Failed Jobs](next-up/allowing-failed-jobs.md)
 * [Global Middleware](next-up/global-middleware.md)
-* [Naming Haystacks](next-up/naming-haystacks.md)
 * [Connection, Queue & Delay](next-up/connection-queue-and-delay.md)
-* [Custom Options](next-up/custom-options.md)
-* [Before Saving Hook](next-up/before-saving-hook.md)
+* [Naming Haystacks](next-up/naming-haystacks.md)
+* [Before Saving Hook](explore/before-saving-hook.md)
+* [Custom Options](explore/custom-options.md)
 
 ## 🧼 Cleanup
 

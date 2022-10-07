@@ -1,10 +1,14 @@
-# Completion Events
+# Callback Events
 
-Laravel Haystack provides you with three really simple callback events that will be serialized and used at certain points in time.
+There are four callback events that Haystack provides throughout its lifecycle. These are **then, catch, finally** and **paused**. You can use these methods to run application code like notifying a user.
+
+{% hint style="warning" %}
+Since these callback events are serialized and stored in the database you cannot use **$this** inside of the anonymous functions.
+{% endhint %}
 
 #### Then
 
-The “then” event is triggered when the haystack has completed successfully.
+The “then” event is triggered when the haystack has been completed successfully.
 
 ```php
 $haystack = Haystack::build()
@@ -30,7 +34,7 @@ $haystack = Haystack::build()
 
 #### Finally
 
-The “finally “event is always triggered at the end of a haystack, if it was successful or if it failed. This is very useful if you want to have loading states in your application.
+The “finally “event is always triggered at the end of a haystack on both success and failure.&#x20;
 
 ```php
 $haystack = Haystack::build()
@@ -56,7 +60,7 @@ $haystack = Haystack::build()
 
 #### Invokable classes
 
-Each of these methods support invokable classes.
+Each of these methods supports invokable classes. If you use invokable classes you will have access to the **$this** context.&#x20;
 
 ```php
 $haystack = Haystack::build()
@@ -75,4 +79,20 @@ class Then {
        // Do something...
    }
 }
+```
+
+#### Chained Methods
+
+Each of the callback events can be chained for multiple events.
+
+```php
+$haystack = Haystack::build()
+   ->addJob(new RecordPodcast)
+   ->then(function () {
+       // Do something first...
+   })
+   ->then(function () {
+       // Then do something after! 
+   })
+   ->dispatch();
 ```

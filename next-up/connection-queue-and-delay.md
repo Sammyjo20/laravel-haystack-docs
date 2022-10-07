@@ -1,6 +1,6 @@
 # Connection, Queue & Delay
 
-You can configure a global delay, connection and queue that will apply to all jobs in the haystack. You can also provide a per-job configuration if you would prefer.
+You can configure a global delay, connection and queue that will apply to all jobs in the haystack. You can also provide a per-job configuration if you choose to too.
 
 #### Delay
 

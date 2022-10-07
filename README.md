@@ -30,7 +30,7 @@ $haystack = Haystack::build()
 
 #### But doesn't Laravel already have job chains?
 
-That's right! Laravel does have job chains but they have some disadvantages that you might want to think about.
+Yep, Laravel does have job chains but there are quite limited and come with some disadvantages that you might want to think about.
 
 * They consume quite a lot of memory/data since the chain is stored inside the job. This is especially true if you are storing thousands of jobs.
 * They are volatile, meaning if you lose one job in the chain - you lose the whole chain.

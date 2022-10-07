@@ -6,7 +6,7 @@
 * [How It Works](getting-started/how-it-works.md)
 * [Installation](getting-started/installation.md)
 * [Usage](getting-started/usage.md)
-* [Callback Events](getting-started/callback-events.md)
+* [Callback Events](getting-started/completion-events.md)
 
 ## 🛰 Cool Features
 

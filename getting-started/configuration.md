@@ -1,6 +1,6 @@
 # Configuration
 
-Laravel Haystack provides various configuration options, altering default package behaviour that you may find useful for your application.
+Laravel Haystack provides various configuration options, altering default package behaviour that you may find useful for your application. These can be changed in the `config/haystack.php` file.
 
 ## Return All Haystack Data When Finished
 

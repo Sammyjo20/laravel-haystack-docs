@@ -61,7 +61,7 @@ class ProcessPodcast implements ShouldQueue, StackableJob
         // Or, with a delay in seconds:
         $this->nextJob($seconds = 15);
         
-        // Or, with a delay with a Carbon instance:
+        // Or, with a delay using a Carbon instance:
         $this->nextJob(now()->addDay());
     }
 }

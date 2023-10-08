@@ -31,7 +31,7 @@ $haystack = Haystack::build()
 
 ## Process Automatically
 
-This configuration determines whether Laravel Haystack should automatically queue "Stackable" jobs after each job is processed. If set to `false`, you will need to manually call `$this->nextJob` inside your jobs:
+This configuration determines whether Laravel Haystack should automatically queue `Stackable` jobs after each job is processed. If set to `false`, you will need to manually call `$this->nextJob` inside your jobs:
 
 ```php
 // config/haystack.php

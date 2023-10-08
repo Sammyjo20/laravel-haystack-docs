@@ -97,7 +97,7 @@ Specifies the duration (in days) for which finished haystacks will be retained. 
 'keep_finished_haystacks_for_days' => 1,
 ```
 
-## Default Database Connection Name
+## Database Connection
 
 Specifies the database connection used to store haystack jobs. The default value is retrieved from the `HAYSTACK_DB_CONNECTION` environment variable, falling back to the default database connection specified in your Laravel configuration (`DB_CONNECTION`).
 
